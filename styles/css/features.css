@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   column-gap: 16px;
+  font-size: 14px;
 }
 .features__container ul li::before {
   content: url(../../icons/check-circle.svg);

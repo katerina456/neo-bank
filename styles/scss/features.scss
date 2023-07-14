@@ -8,8 +8,7 @@
 }
 
 .features__container {
-    display: flex;
-    justify-content: space-between;
+    @include flexJustify(space-between);
     ul {
         padding-top: 25px;
         display: flex;
@@ -20,6 +19,7 @@
             display: flex;
             align-items: center;
             column-gap: 16px;
+            font-size: 14px;
             &::before {
                 content: url(../../icons/check-circle.svg);
                 height: 24px;

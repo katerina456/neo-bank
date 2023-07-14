@@ -31,8 +31,7 @@ footer {
 }
 
 .footer__contacts {
-    display: flex;
-    justify-content: space-between;
+    @include flexJustify(space-between);
     margin-bottom: 32px;
 }
 

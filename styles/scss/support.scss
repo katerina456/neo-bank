@@ -25,11 +25,10 @@
 }
 
 .support__form {
+    @include flexJustify(center);
     & div {
         position: relative;
     }
-    display: flex;
-    justify-content: center;
 }
 
 .support__input {
@@ -59,9 +58,8 @@
 .support__submit {
     border-radius: 20px;
     background: #686DF1;
-    display: flex;
+    @include flexJustify(center);
     align-items: center;
-    justify-content: center;
     column-gap: 10px;
     position: absolute;
     bottom: 22px;

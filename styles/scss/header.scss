@@ -2,9 +2,8 @@
 @import "_mixins.scss";
 
 .header {
-    display: flex;
+    @include flexJustify(space-between);
     padding: 7px 0;
-    justify-content: space-between;
     align-items: center;
 }
 

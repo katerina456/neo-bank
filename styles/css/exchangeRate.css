@@ -51,9 +51,9 @@
 
 .exchangeRate-currency {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 32px;
   row-gap: 32px;
+  column-gap: 32px;
+  grid-template-columns: repeat(3, auto);
   margin-top: 32px;
   margin-bottom: 51px;
 }
