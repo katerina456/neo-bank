@@ -1,0 +1,45 @@
+.features {
+  margin-bottom: 48px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+}
+
+.features__container {
+  display: flex;
+  justify-content: space-between;
+}
+.features__container ul {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.features__container ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.features__container ul li::before {
+  content: url(../../icons/check-circle.svg);
+  height: 24px;
+}
+
+.features__item {
+  padding-top: 74px;
+}
+
+.features__title {
+  color: #0B132A;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
+.features__text {
+  color: #4F5665;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}

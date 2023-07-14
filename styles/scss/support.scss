@@ -1,0 +1,81 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.support__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    margin-bottom: 62px;
+}
+
+.support__subTitle {
+    @include fonts($orange, 24px, 700, 147.4%);
+    text-align: center;
+    letter-spacing: 0.48px;
+    margin-bottom: 30px;
+}
+
+.support__title {
+    @include fonts($title-lightBlack, 30px, 700, 147.4%);
+    text-align: center;
+    letter-spacing: 0.6px;
+    span {
+        font-weight: 500;
+    }
+}
+
+.support__form {
+    & div {
+        position: relative;
+    }
+    display: flex;
+    justify-content: center;
+}
+
+.support__input {
+    @include fonts($title-lightBlack, 20px, 400, 147.4%);
+    width: 524.8px;
+    height: 90px;
+    padding: 31px;
+    padding-left: 70px;
+    padding-right: 200px;
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.10);
+    border: 0;
+    outline: none;
+    background-image: url(../../icons/email.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 32px;
+    &::placeholder {
+        @include fonts($placeholder, 20px, 400, 147.4%);
+        font-family: 'Nunito Sans', sans-serif;
+        font-style: normal;
+        letter-spacing: 0.4px;
+    }
+}
+
+.support__submit {
+    border-radius: 20px;
+    background: #686DF1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    position: absolute;
+    bottom: 22px;
+    right: 32px;
+    width: 162px;
+    border: 0;
+    cursor: pointer;
+    padding: 5px;
+    &:hover {
+        background: #5255c2
+    }
+    span {
+        @include fonts($white, 16px, 700, 126.9%);
+        font-family: 'Ubuntu';
+        font-style: normal;
+    }
+}

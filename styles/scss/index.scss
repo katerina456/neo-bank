@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F4FF;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.button {
+    border-radius: 16px;
+    background: $blue3;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    span {
+        @include fonts($white, 16px, 700, 112%);
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-style: normal;
+        letter-spacing: 0.32px;
+    }
+    &:hover {
+        background: #0034da;
+    }
+}

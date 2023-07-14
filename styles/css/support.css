@@ -1,0 +1,93 @@
+.support__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  margin-bottom: 62px;
+}
+
+.support__subTitle {
+  color: #EB801D;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 147.4%;
+  text-align: center;
+  letter-spacing: 0.48px;
+  margin-bottom: 30px;
+}
+
+.support__title {
+  color: #1C1C1E;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 147.4%;
+  text-align: center;
+  letter-spacing: 0.6px;
+}
+.support__title span {
+  font-weight: 500;
+}
+
+.support__form {
+  display: flex;
+  justify-content: center;
+}
+.support__form div {
+  position: relative;
+}
+
+.support__input {
+  color: #1C1C1E;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 147.4%;
+  width: 524.8px;
+  height: 90px;
+  padding: 31px;
+  padding-left: 70px;
+  padding-right: 200px;
+  border-radius: 20px;
+  background-color: #FFF;
+  box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1);
+  border: 0;
+  outline: none;
+  background-image: url(../../icons/email.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 32px;
+}
+.support__input::placeholder {
+  color: #9092B0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 147.4%;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.4px;
+}
+
+.support__submit {
+  border-radius: 20px;
+  background: #686DF1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  position: absolute;
+  bottom: 22px;
+  right: 32px;
+  width: 162px;
+  border: 0;
+  cursor: pointer;
+  padding: 5px;
+}
+.support__submit:hover {
+  background: #5255c2;
+}
+.support__submit span {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 126.9%;
+  font-family: "Ubuntu";
+  font-style: normal;
+}

@@ -1,0 +1,79 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.exchangeRate {
+    margin-bottom: 48px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+}
+
+.exchangeRate__container {
+    border-radius: 28px;
+    background: linear-gradient(360deg, rgba(178, 178, 178, 0.80) 0%, rgba(178, 178, 178, 0.00) 100%), rgba(244, 244, 244, 0.90);
+    box-shadow: 0px 2px 4px 0px rgba(187, 187, 187, 0.20), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+%text {
+    @include fonts($text-darkBlack, 20px, 500, 50px); 
+}
+
+.exchangeRate__title {
+    @extend %text;
+    color: $title-lightBlack;
+    font-size: 30px;
+    margin-bottom: 24px
+}
+
+.exchangeRate__text {
+    @extend %text;
+}
+
+.exchangeRate__text-small {
+    @extend %text;
+    font-size: 16px;
+    margin-bottom: 79px;
+}
+
+%text-bold {
+    @extend %text;
+    font-weight: 700;
+    line-height: 112%;
+    letter-spacing: 0.4px;
+}
+
+.exchangeRate__text-bold {
+    @extend %text-bold;
+    span {
+        color: $text-grey;
+    }
+}
+
+.exchangeRate__text-white {
+    @extend %text-bold;
+    color: $white;  
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.exchangeRate-currency {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 32px;
+    row-gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 51px;
+}
+
+.exchangeRate-item {
+    display: flex;
+    column-gap: 20px;
+}
+
+.exchangeRate__house {
+    text-align: right;
+}

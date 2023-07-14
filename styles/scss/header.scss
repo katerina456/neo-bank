@@ -1,0 +1,31 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.header {
+    display: flex;
+    padding: 7px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    p {
+        @include fonts($logo-pink, 24px, 700, 112%);
+        letter-spacing: 0.48px;
+    }
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    column-gap: 40px;
+    & .navigation__item a {
+        @include fonts($text-gray2, 16px, 700, 112%);
+        letter-spacing: 0.32px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.exchangeRate {
+  margin-bottom: 48px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+
+.exchangeRate__container {
+  border-radius: 28px;
+  background: linear-gradient(360deg, rgba(178, 178, 178, 0.8) 0%, rgba(178, 178, 178, 0) 100%), rgba(244, 244, 244, 0.9);
+  box-shadow: 0px 2px 4px 0px rgba(187, 187, 187, 0.2), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exchangeRate__text-white, .exchangeRate__text-bold, .exchangeRate__text-small, .exchangeRate__text, .exchangeRate__title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.exchangeRate__title {
+  color: #1C1C1E;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.exchangeRate__text-small {
+  font-size: 16px;
+  margin-bottom: 79px;
+}
+
+.exchangeRate__text-white, .exchangeRate__text-bold {
+  font-weight: 700;
+  line-height: 112%;
+  letter-spacing: 0.4px;
+}
+
+.exchangeRate__text-bold span {
+  color: #808080;
+}
+
+.exchangeRate__text-white {
+  color: #FFF;
+  text-decoration: none;
+}
+.exchangeRate__text-white:hover {
+  text-decoration: underline;
+}
+
+.exchangeRate-currency {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 32px;
+  row-gap: 32px;
+  margin-top: 32px;
+  margin-bottom: 51px;
+}
+
+.exchangeRate-item {
+  display: flex;
+  column-gap: 20px;
+}
+
+.exchangeRate__house {
+  text-align: right;
+}

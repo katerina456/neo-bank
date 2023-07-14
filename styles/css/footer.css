@@ -1,0 +1,49 @@
+.footer__text, footer ul li a {
+  color: #2D3748;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 147.4%;
+  letter-spacing: 0.32px;
+}
+
+footer {
+  padding-top: 96px;
+  padding-bottom: 92px;
+  background: linear-gradient(0deg, rgba(178, 178, 178, 0.2) 0%, rgba(178, 178, 178, 0.2) 100%), #F4F4F4;
+}
+footer ul {
+  display: flex;
+  column-gap: 32px;
+  row-gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+footer ul li {
+  list-style: none;
+}
+footer ul li a {
+  color: #000;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.footer__phone {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 147.4%;
+  margin-bottom: 8px;
+}
+
+.footer-cookies {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.81);
+}

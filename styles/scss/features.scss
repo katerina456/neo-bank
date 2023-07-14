@@ -1,0 +1,42 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.features {
+    margin-bottom: 48px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+}
+
+.features__container {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            &::before {
+                content: url(../../icons/check-circle.svg);
+                height: 24px;
+            }
+        }
+    }
+}
+
+.features__item {
+    padding-top: 74px;
+}
+
+.features__title {
+    @include fonts($title-black, 35px, 500, 50px);
+    margin-bottom: 20px;
+}
+
+.features__text {
+    @include fonts($text-darkGrey, 16px, 400, 30px);
+}

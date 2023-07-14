@@ -1,0 +1,51 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+%text {
+    @include fonts($text-darkBlue, 16px, 500, 147.4%);
+    letter-spacing: 0.32px;
+}
+
+footer {
+    padding-top: 96px;
+    padding-bottom: 92px;
+    background: linear-gradient(0deg, rgba(178, 178, 178, 0.20) 0%, rgba(178, 178, 178, 0.20) 100%), #F4F4F4;
+    ul {
+        display: flex;
+        column-gap: 32px;
+        row-gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+        li {
+            list-style: none;
+            a {
+                @extend %text;
+                color: $text-darkBlack;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.footer__phone {
+    @include fonts($text-darkBlack, 30px, 700, 147.4%);
+    margin-bottom: 8px
+}
+
+.footer__text {
+    @extend %text;
+}
+
+.footer-cookies {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.81);
+}

@@ -1,0 +1,26 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.chooseDesign {
+    margin-bottom: 112px;
+}
+
+.chooseDesign__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chooseDesign__title {
+    @include fonts($title-lightBlack, 48px, 700, 50px);
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    margin-bottom: 36px;
+    width: 622px;
+}
+
+.chooseDesign__item {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: auto auto;
+}
