@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -37,4 +37,10 @@ body {
 }
 .button:hover {
   background: #0034da;
+}
+
+@media (max-width: 920px) {
+  .container {
+    width: 90vw;
+  }
 }

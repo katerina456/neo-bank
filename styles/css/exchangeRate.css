@@ -66,3 +66,25 @@
 .exchangeRate__house {
   text-align: right;
 }
+
+@media (max-width: 920px) {
+  .exchangeRate-currency {
+    display: flex;
+    max-width: 420px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .exchangeRate__container {
+    flex-direction: column;
+  }
+  .exchangeRate__house {
+    display: none;
+  }
+  .exchangeRate__text-small {
+    margin: 0;
+  }
+  .exchangeRate__title {
+    font-size: 24px;
+  }
+}

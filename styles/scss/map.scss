@@ -19,4 +19,20 @@
 
 .map__foto {
     text-align: center;
+    width: 100%;
+    img {
+        width: inherit;
+    }
+}
+
+@media (max-width: 920px) {
+    .map__foto img {
+        width: 75vw;
+    }
+}
+  
+@media (max-width: 500px) {
+    .map__title {
+        font-size: 24px;
+    }
 }

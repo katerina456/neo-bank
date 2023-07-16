@@ -28,3 +28,13 @@
         }
     }
 }
+
+@media (max-width: 920px) {
+    .header {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .navigation ul {
+        column-gap: 20px;
+    }
+}

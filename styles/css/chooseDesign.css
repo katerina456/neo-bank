@@ -13,7 +13,7 @@
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 36px;
-  width: 622px;
+  max-width: 622px;
 }
 
 .chooseDesign__item {
@@ -21,4 +21,31 @@
   row-gap: 16px;
   column-gap: 16px;
   grid-template-columns: auto auto;
+}
+
+@media (max-width: 920px) {
+  .chooseDesign {
+    margin-bottom: 48px;
+  }
+  .chooseDesign__container {
+    flex-direction: column;
+  }
+  .chooseDesign__item {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .chooseDesign__title {
+    width: auto;
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .chooseDesign__item img {
+    max-width: 180px;
+  }
+  .chooseDesign__title {
+    font-size: 30px;
+  }
 }

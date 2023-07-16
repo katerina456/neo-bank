@@ -2,3 +2,16 @@ main {
     padding-top: 131px;
     padding-bottom: 98px;
 }
+
+@media (max-width: 920px) {
+    main {
+        padding-top: 64px;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        padding-top: 48px;
+        padding-bottom: 60px;
+    }
+}

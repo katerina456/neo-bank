@@ -32,3 +32,13 @@
 .navigation ul .navigation__item a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 920px) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .navigation ul {
+    column-gap: 20px;
+  }
+}

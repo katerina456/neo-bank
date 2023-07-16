@@ -91,3 +91,34 @@
   font-family: "Ubuntu";
   font-style: normal;
 }
+
+@media (max-width: 920px) {
+  .support__input {
+    width: 480px;
+  }
+}
+@media (max-width: 500px) {
+  .support__form div {
+    position: relative;
+    width: 100%;
+  }
+  .support__input {
+    width: inherit;
+    padding-right: 150px;
+  }
+  .support__title {
+    font-size: 24px;
+  }
+  .support__subTitle {
+    font-size: 22px;
+  }
+  .support__input {
+    font-size: 16px;
+  }
+  .support__input::placeholder {
+    font-size: 16px;
+  }
+  .support__submit {
+    width: auto;
+  }
+}
