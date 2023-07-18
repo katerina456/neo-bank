@@ -28,6 +28,17 @@ footer {
             }
         }
     }
+    address {
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+            margin-bottom: 0;
+            li a {
+                font-style: normal
+            }
+        }
+    }
 }
 
 .footer__contacts {
@@ -37,7 +48,6 @@ footer {
 
 .footer__phone {
     @include fonts($text-darkBlack, 30px, 700, 147.4%);
-    margin-bottom: 8px
 }
 
 .footer__text {
