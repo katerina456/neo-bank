@@ -1,72 +1,16 @@
-import './js/test'
-
 //import './styles/scss/all.scss'
 
 import "./styles/scss/index.scss";
 import "./styles/scss/header.scss";
 import "./styles/scss/main.scss";
-
 import "./styles/scss/chooseDesign.scss";
-
 import "./styles/scss/features.scss";
 import "./styles/scss/exchangeRate.scss";
-
-
 import "./styles/scss/map.scss";
 import "./styles/scss/news.scss";
-
 import "./styles/scss/support.scss";
-
 import "./styles/scss/footer.scss";
 
-
-
-/* 
-const currencies = ['USD', 'EUR', 'CNH', 'JPY', 'INR', 'MXN'];
-
-async function getExchange() {
-  let obj = {}
-
-  currencies.forEach(async item => {
-    //console.log(item)
-
-    const response = await fetch(`https://currency-exchange.p.rapidapi.com/exchange?to=RUB&from=${item}&q=1.0`, {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": "5f91ee47e9mshc8436068fd8f0a7p107f97jsn34d66fb784a5",
-        "x-rapidapi-host": "currency-exchange.p.rapidapi.com"
-      }
-    })
-    const value = await response.json();
-    //console.log(value)
-    obj[item] = value.toFixed(2)
-  })
-  
-  return obj
-}
-
-
-showCurrencies()
-setInterval(showCurrencies, 10000);
-
-
-async function showCurrencies() {
-  let obj = await getExchange()
-  
-  console.log('f', obj)
-
-  let exchangeRateItems = document.querySelectorAll('.exchangeRate-item')
-
-  exchangeRateItems.forEach(item => {
-
-    let paragraphs = item.querySelectorAll('p')
-    let title = paragraphs[0].textContent.slice(0,3)
- // console.log(obj.EUR)
-    let value = paragraphs[1]
-    value.textContent = obj[title]
-    console.log(title, value)
-  })
-} */
 
 const currencies = ['USD', 'CNH', 'INR', 'EUR', 'JPY', 'MXN'];
 
@@ -123,17 +67,14 @@ getNews()
 
 function setSlider() {
   const swiper = new Swiper('.swiper', {
-    spaceBetween: 30,
+    slidesPerView: 'auto',
+    spaceBetween: 80,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-
+    
     keyboard: true,
-
   });
 }
 
