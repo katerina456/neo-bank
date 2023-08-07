@@ -1,0 +1,129 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.news {
+    margin-bottom: 64px;
+}
+
+%text {
+    @include fonts($text-darkBlack, 16px, 500, 50px);
+    text-align: center;
+}
+
+.news__title {
+    @extend %text;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.news__text {
+    @extend %text;
+    color: $text-darkBlue;
+}
+
+.news__slider {
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.slider__item {
+    width: 320px;
+    height: 448px;
+    border-radius: 28px;
+    border: 1px solid rgba(187, 187, 187, 0.20);
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    div {
+        text-align: center;
+        img {
+            height: 120px;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.slider__title {
+    @extend %text; 
+    font-size: 20px;
+    line-height: 25px; 
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.slider__text {
+    @extend %text;
+    line-height: 23px; 
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.slider__buttons {
+    display: flex;
+    column-gap: 20px;
+    align-self: flex-end;
+}
+
+.slider__button {
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    border: 1px solid #003CFF;
+    background: #FFF;
+    cursor: pointer;
+    &:hover {
+        border-radius: 50px;
+        background: var(--blue-3, #003CFF);
+    }
+}
+
+
+
+@media (max-width: 920px) {
+    .support__input {
+        width: 480px;
+    }
+}
+
+@media (max-width: 500px) {
+    .support__form div {
+        position: relative;
+        width: 100%;
+    }
+    .support__input {
+        width: inherit;
+        padding-right: 150px;
+    }
+    .support__title {
+        font-size: 24px;
+    }
+    .support__subTitle {
+        font-size: 22px;
+    }
+    .support__input {
+        font-size: 16px;
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+    .support__submit {
+        width: auto;
+    }
+}

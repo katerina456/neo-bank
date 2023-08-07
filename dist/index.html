@@ -8,17 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/css/index.css">
-    <link rel="stylesheet" href="styles/css/header.css">
-    <link rel="stylesheet" href="styles/css/main.css">
+    <!-- <link rel="stylesheet" href="/src/styles/css/index.css">
+    <link rel="stylesheet" href="/src/styles/css/header.css">
+    <link rel="stylesheet" href="../src/styles/css/main.css">
     <link rel="stylesheet" href="styles/css/chooseDesign.css">
     <link rel="stylesheet" href="styles/css/features.css">
     <link rel="stylesheet" href="styles/css/exchangeRate.css">
     <link rel="stylesheet" href="styles/css/map.css">
+    <link rel="stylesheet" href="styles/css/news.css">
     <link rel="stylesheet" href="styles/css/support.css">
-    <link rel="stylesheet" href="styles/css/footer.css">
+    <link rel="stylesheet" href="styles/css/footer.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <title>Neo Bank</title>
-</head>
+<script defer src="bundle.js"></script><link href="styles.css" rel="stylesheet"></head>
 <body>
     <header>
         <div class="container">
@@ -156,6 +158,33 @@
             </div>
         </section>
 
+        <section class="news">
+            <div class="container">
+                <h2 class="news__title">Current news from the world of finance</h2>
+                <p class="news__text">
+                    We update the news feed every 15 minutes. 
+                    You can learn more by clicking on the news you are interested in.
+                </p>
+                <div class="news__slider swiper">
+                    <div class="slider swiper-wrapper">
+                        <!-- <div class="slider__item">
+                            <div><img src="" alt=""></div>
+                            <p class="item__title">ttt</p>
+                            <p class="item__text">ttt</p>
+                        </div> -->
+                    </div>
+                    <div class="slider__buttons">
+                        <div class="slider__button swiper-button-prev">
+                            <img src="" alt="">
+                        </div>
+                        <div class="slider__button swiper-button-next">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="support">
             <div class="container">
                 <h3 class="support__subTitle">Support</h3>
@@ -214,6 +243,7 @@
         </div>
     </footer>
 
-    <script src="scripts/index.js"></script>
+<!--     <script src="bundle.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
