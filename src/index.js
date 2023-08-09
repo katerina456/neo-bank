@@ -24,19 +24,45 @@ async function getExchange() {
       }
     })
     const value = await response.json();
-    return (value*Math.random()).toFixed(2);
+    return value.toFixed(2);
   })).then(values => {
     showCurrencies(values);
   });
 }
 
+function setExchange() {
+  let parent = document.querySelector('.exchangeRate-currency');
+  currencies.forEach(currency => {
+    let div = document.createElement('div');
+    div.classList.add('exchangeRate-item');
 
-getExchange()
+    let title = document.createElement('p');
+    title.classList.add('exchangeRate__text-bold');
+
+    let span = document.createElement('span');
+    span.textContent = currency + ':';
+
+    title.appendChild(span);
+
+    let text = document.createElement('p');
+    text.classList.add('exchangeRate__text-bold');
+
+    div.appendChild(title);
+    div.appendChild(text);
+
+    parent.appendChild(div);
+
+  })
+  getExchange();
+}
+
+
+setExchange();
 setInterval(getExchange, 60000);
 
 
 function showCurrencies(arr) {
-  console.log('f', arr)
+  console.log('f', arr);
 
   let exchangeRateItems = document.querySelectorAll('.exchangeRate-item');
   
@@ -56,14 +82,14 @@ function getNews() {
 
     .then(res => res.json())
     .then(data => {
-      console.log(data)
-      showNews(data.articles)
-      setSlider()
+      console.log(data);
+      showNews(data.articles);
+      setSlider();
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err));
 }
 
-getNews()
+getNews();
 
 function setSlider() {
   const swiper = new Swiper('.swiper', {
@@ -79,44 +105,42 @@ function setSlider() {
 }
 
 function showNews(obj) {
-  let news = document.querySelector('.slider')
+  let news = document.querySelector('.slider');
 
   obj.forEach(item => {
-    let element = document.createElement('div')
-    element.classList.add('slider__item')
-    element.classList.add('swiper-slide')
+    let element = document.createElement('div');
+    element.classList.add('slider__item');
+    element.classList.add('swiper-slide');
 
-    let div = document.createElement('div')
-    let img = document.createElement('img')
-    img.src = item.urlToImage !== null ? item.urlToImage : ''
-    let imgLink = document.createElement('a')
-    imgLink.href = item.url
-    imgLink.target = 'blank'
-    imgLink.appendChild(img)
-    div.appendChild(imgLink)
+    let div = document.createElement('div');
+    let img = document.createElement('img');
+    img.src = item.urlToImage !== null ? item.urlToImage : '';
+    let imgLink = document.createElement('a');
+    imgLink.href = item.url;
+    imgLink.target = 'blank';
+    imgLink.appendChild(img);
+    div.appendChild(imgLink);
 
-    let title = document.createElement('p')
-    title.classList.add('slider__title')
-    title.textContent = item.title !== null ? item.title : ''
-    let titleLink = document.createElement('a')
-    titleLink.href = item.url
-    titleLink.target = 'blank'
-    titleLink.appendChild(title)
+    let title = document.createElement('p');
+    title.classList.add('slider__title');
+    title.textContent = item.title !== null ? item.title : '';
+    let titleLink = document.createElement('a');
+    titleLink.href = item.url;
+    titleLink.target = 'blank';
+    titleLink.appendChild(title);
 
-    let text = document.createElement('p')
-    text.classList.add('slider__text')
-    text.innerHTML = item.description !== null ? item.description : ''
-    let textLink = document.createElement('a')
-    textLink.href = item.url
-    textLink.target = 'blank'
-    textLink.appendChild(text)
+    let text = document.createElement('p');
+    text.classList.add('slider__text');
+    text.innerHTML = item.description !== null ? item.description : '';
+    let textLink = document.createElement('a');
+    textLink.href = item.url;
+    textLink.target = 'blank';
+    textLink.appendChild(text);
 
-    element.appendChild(div)
-    element.appendChild(titleLink)
-    element.appendChild(textLink)
-    
-    
+    element.appendChild(div);
+    element.appendChild(titleLink);
+    element.appendChild(textLink);
 
-    news.appendChild(element)
+    news.appendChild(element);
   })
 }
