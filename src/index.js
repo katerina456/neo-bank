@@ -66,11 +66,9 @@ function showCurrencies(arr) {
 
   let exchangeRateItems = document.querySelectorAll('.exchangeRate-item');
 
-  console.log(exchangeRateItems.length)
-
   if (exchangeRateItems.length === 0) {
-    setExchange(arr)
-    return
+    setExchange(arr);
+    return;
   }
   
   arr.forEach((item, index) => {
