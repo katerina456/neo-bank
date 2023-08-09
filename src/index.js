@@ -30,9 +30,10 @@ async function getExchange() {
   });
 }
 
-function setExchange() {
+
+function setExchange(arr) {
   let parent = document.querySelector('.exchangeRate-currency');
-  currencies.forEach(currency => {
+  currencies.forEach((currency, index) => {
     let div = document.createElement('div');
     div.classList.add('exchangeRate-item');
 
@@ -46,18 +47,17 @@ function setExchange() {
 
     let text = document.createElement('p');
     text.classList.add('exchangeRate__text-bold');
+    text.textContent = arr[index];
 
     div.appendChild(title);
     div.appendChild(text);
 
     parent.appendChild(div);
-
   })
-  getExchange();
 }
 
 
-setExchange();
+getExchange();
 setInterval(getExchange, 60000);
 
 
@@ -65,6 +65,13 @@ function showCurrencies(arr) {
   console.log('f', arr);
 
   let exchangeRateItems = document.querySelectorAll('.exchangeRate-item');
+
+  console.log(exchangeRateItems.length)
+
+  if (exchangeRateItems.length === 0) {
+    setExchange(arr)
+    return
+  }
   
   arr.forEach((item, index) => {
     let elem = exchangeRateItems[index];
